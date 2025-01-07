@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Caterer</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-white">
+
+    
+    <div class="container mx-auto p-10 w-1/3 my-8 bg-orange-50 shadow-lg rounded-lg shadow-orange-400">
+        <h1 class="text-3xl font-semibold mb-6">Book a Caterer</h1>
+        <form class="space-y-4">
+            <div>
+                <label for="menu" class="block text-gray-700 font-medium">Choose Menu</label>
+                <select id="menu" name="menu" class="mt-1 p-2 block w-full rounded-md border-gray-300">
+                    <option value="menu1">Silver Combo 1</option>
+                    <option value="menu2">Silver Combo 2</option>
+                    <option value="menu3">Gold Combo</option>
+                    <option value="menu4">Platinum Combo</option>
+                </select>
+            </div>
+            <div>
+                <label for="date" class="block text-gray-700 font-medium">Date</label>
+                <input type="date" id="date" name="date" class="mt-1 p-2 block w-full rounded-md border-gray-300">
+            </div>
+            <div>
+                <label for="time" class="block text-gray-700 font-medium">Time</label>
+                <input type="time" id="time" name="time" class="mt-1 p-2 block w-full rounded-md border-gray-300">
+            </div>
+            <div>
+                <label for="gatheringSize" class="block text-gray-700 font-medium">Gathering Size (Quantity)</label>
+                <input type="number" id="gatheringSize" name="gatheringSize" class="mt-1 p-2 block w-full rounded-md border-gray-300">
+            </div>
+            <div class="space-y-2">
+                <label class="block text-gray-700 font-medium">Payment Method</label>
+                <div class="flex items-center space-x-4">
+                    <input type="radio" id="cash" name="paymentMethod" value="cash" class="mr-2">
+                    <label for="cash">Cash <i class="fas fa-money-bill-wave text-blue-500"></i></label>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <input type="radio" id="online" name="paymentMethod" value="online" class="mr-2">
+                    <label for="online">Online (Paytm Gateway)<i class="fas fa-credit-card text-green-500"></i></label>
+                </div>
+            </div>
+            <div class="bg-green-100 text-green-700 p-4 rounded-md">
+                <p class="font-medium mb-2">Special Offer for Online Payments:</p>
+                <p>Get 10% off on your total bill when you choose the online payment option!</p>
+            </div>
+            <div>
+                <label for="notes" class="block text-gray-700 font-medium">Additional Notes (Optional)</label>
+                <textarea id="notes" name="notes" rows="4" class="mt-1 p-2 block w-full rounded-md border-gray-300"></textarea>
+            </div>
+            <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Booking History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-orange-50">
+    {% extends 'navfoot.html' %}
+    {% block content %}
+    <header class=" text-black text-start ml-20 my-2">
+      <h1 class="text-3xl md:text-4xl lg:text-xl font-semibold">
+        Your Booking History
+      </h1>
+    </header>
+    <main class="container mx-auto py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-1 gap-6">
+        <!-- Sample Catering Booking Cards -->
+        <div class="bg-white shadow-md rounded-lg p-6 px-10 flex justify-between mx-52 items-center">
+          <div class="left">
+            <h2 class="text-xl font-semibold mb-2">Aggarwal's sweets</h2>
+            <div class="flex-col items-center">
+              <p class="text-gray-600">Date of Booking: August 15, 2023</p>
+              <div class="ml-2">
+                <span class="text-yellow-400 hover:cursor-pointer">4/5 ⭐️⭐️⭐️⭐️</span>
+              </div>
+            </div>
+            <button class="bg-orange-600 text-white px-4 py-2 rounded-md mt-4">
+                Book Again
+              </button>
+          </div>
+          <div class="right">
+            <img
+              src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775689794048071/vmqpkwfi.png"
+              alt="Catering Image"
+              class="w-40 rounded-lg mb-4"
+            />
+          </div>
+
+          
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 px-10 flex justify-between mx-52 items-center">
+          <div class="left">
+            <h2 class="text-xl font-semibold mb-2">NO.1 Catering Services</h2>
+            <div class="flex-col items-center">
+              <p class="text-gray-600">Date of Booking: August 15, 2023</p>
+              <div class="ml-2">
+                <span class="text-red-400 hover:cursor-pointer">2/5 ⭐️⭐️</span>
+              </div>
+            </div>
+            <button class="bg-orange-600 text-white px-4 py-2 rounded-md mt-4">
+                Book Again
+              </button>
+          </div>
+          <div class="right">
+            <img
+              src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775690142158949/wk3m8wmj.png"
+              alt="Catering Image"
+              class="w-40 rounded-lg mb-4"
+            />
+          </div>
+
+          
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 px-10 flex justify-between mx-52 items-center">
+          <div class="left">
+            <h2 class="text-xl font-semibold mb-2">Chawla'a Kitchen</h2>
+            <div class="flex-col items-center">
+              <p class="text-gray-600">Date of Booking: August 15, 2023</p>
+              <div class="ml-2">
+                <span class="text-yellow-400 hover:cursor-pointer">5/5 ⭐️⭐️⭐️⭐️⭐️</span>
+              </div>
+            </div>
+            <button class="bg-orange-600 text-white px-4 py-2 rounded-md mt-4">
+                Book Again
+              </button>
+          </div>
+          <div class="right">
+            <img
+              src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775688749666335/gl7chy65.png"
+              alt="Catering Image"
+              class="w-40 rounded-lg mb-4"
+            />
+          </div>
+
+          
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 px-10 flex justify-between mx-52 items-center">
+          <div class="left">
+            <h2 class="text-xl font-semibold mb-2">Mithila Bhojanalaya</h2>
+            <div class="flex-col items-center">
+              <p class="text-gray-600">Date of Booking: August 15, 2023</p>
+              <div class="ml-2">
+                <span class="text-yellow-400 hover:cursor-pointer">5/5 ⭐️⭐️⭐️⭐️⭐️</span>
+              </div>
+            </div>
+            <button class="bg-orange-600 text-white px-4 py-2 rounded-md mt-4">
+                Book Again
+              </button>
+          </div>
+          <div class="right">
+            <img
+              src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775689093582939/itxg7m8c.png"
+              alt="Catering Image"
+              class="w-40 rounded-lg mb-4"
+            />
+          </div>
+        
+        <!-- Add more cards as needed -->
+      </div>
+    </main>
+    <!-- ... rest of the page ... -->
+    {% endblock content %}
+  </body>
+</html>

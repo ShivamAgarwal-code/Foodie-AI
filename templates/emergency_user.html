@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png" type="image/x-icon">
+  <title>Yo! Bawarchi - Taste for all Occasion</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/emergency.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+  <!-- below proifle button in nav -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      /* Add shadows to create the "card" effect */
+      /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+      background-color: rgb(255, 246, 240);
+      transition: 0.3s;
+      width: 20vw;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .card-inside {
+      padding: 2px 16px;
+    }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    .product-image img {
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    /* product image container */
+    .product-image {
+      padding: 0.5rem;
+    }
+
+    .product-name {
+      font-size: 150%;
+    }
+
+    .product-discription {
+      font-size: 80%;
+    }
+
+    .cont1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cont-left,
+    .cont-right {
+      width: 100%;
+      /* border: 2px blue solid; */
+      display: flex;
+      justify-content: center;
+    }
+
+    .stock {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .card {
+      margin: 10px;
+    }
+    .product-rating{
+      display: flex;
+      /* justify-content: center; */
+      margin: 5px;
+    }
+  </style>
+  <style>
+    header {
+      font-family: Arial, sans-serif;
+      background-color: rgb(250, 152, 132, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 82px;
+    }
+
+    .dp {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 60px;
+      aspect-ratio: auto 60 / 60;
+      width: 60px;
+      position: relative;
+      left: -13vw;
+      border: 3px solid rgb(231, 70, 70);
+      border-radius: 50%;
+    }
+
+    .user {
+      font-family: Arial, sans-serif;
+      /* text-align: center; */
+      position: relative;
+      left: -13vw;
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      position: relative;
+      /* left: 5vw; */
+    }
+
+    .button-container {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      /* left: 17vw; */
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 100px;
+      background-color: rgb(231, 70, 70);
+      border: none;
+      color: rgb(255, 248, 241);
+      text-align: center;
+      font-size: 25px;
+      padding: 5px;
+      /* padding: 0 5px 0 5px; */
+      /* width: 100px; */
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      display: flex;
+      width: 160px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reject {
+      background-color: rgb(255, 243, 226, 0.9);
+      color: rgb(138, 30, 30);
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      bottom: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 15px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    div a {
+      text-decoration: none;
+    }
+
+    .user {
+      margin-top: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- nav container below -->
+
+<!-- nav container above -->
+
+
+  <div class="cont1 mt-6">
+    <div class="cont-left">
+      <div class="stock">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img src="https://cdn.discordapp.com/attachments/1118765599892455464/1122208714275958875/image.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex">
+              <div class="inleft">
+                <div class="product-name">Indian Thali</div>
+                <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+                <div class="product-rating"><img
+                    src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                    width="10%" alt="">&nbsp;Shyam Vihar, New Delhi</div>
+                <div class="product-price">
+                  <div class="product-price">Price <s>₹599/-</s> ₹99.00/-</div>
+                  <div class="product-offer">69% off</div>
+                </div>
+                <a href="#">
+                  <li class="button py-6">
+                    <span>Book Now</span>
+                  </li>
+                </a>
+              </div>
+              <div class="flex items-center">
+                <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                  <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                  <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">50 plates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img
+                src="https://cdn.discordapp.com/attachments/1118765599892455464/1122209054056517712/Punjabi-thali-WS-1-500x500.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex">
+              <div class="inleft">
+                <div class="product-name">Indian Custom</div>
+                <div class="product-discription">By Bittu Halwai</div>
+                <div class="product-rating"><img
+                    src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                    width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+                <div class="product-price">
+                  <div class="product-price">Price <s>₹799/-</s> ₹149.00/-</div>
+                  <div class="product-offer">59% off</div>
+                </div>
+                <a href="#">
+                  <li class="button py-6">
+                    <span>Book Now</span>
+                  </li>
+                </a>
+              </div>
+              <div class="flex items-center">
+                <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                  <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                  <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">150 plates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img
+                src="https://cdn.discordapp.com/attachments/1118765599892455464/1122210292340883466/RESTAURANT_STYLE_SOUTH_INDIAN_THALI_original.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex"><div class="inleft">
+              <div class="product-name">South Indian</div>
+              <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+              <div class="product-rating"><img
+                  src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                  width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+              <div class="product-price">
+                <div class="product-price">Price <s>₹799/-</s> ₹149.00/-</div>
+                <div class="product-offer">59% off</div>
+              </div>
+              <a href="#">
+                <li class="button py-6">
+                  <span>Book Now</span>
+                </li>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">40 plates</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img src="https://cdn.discordapp.com/attachments/1118765599892455464/1122211013882810368/image.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex"><div class="inleft">
+              <div class="product-name">Bahubali Thali</div>
+              <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+              <div class="product-rating flex"><img
+                  src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                  width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+              <div class="product-price">
+                <div class="product-price">Price <s>₹899/-</s> ₹149.00/-</div>
+                <div class="product-offer">59% off</div>
+              </div>
+              <a href="#">
+                <li class="button py-6">
+                  <span>Book Now</span>
+                </li>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">100 plates</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="cont-right mb-8">
+      <a href="#">
+        <li class="button py-6" style="width: 200px;">
+          <span>Add Stock</span>
+        </li>
+      </a>
+    </div> -->
+  </div>
+
+  <div class="cont1 mt-6">
+    <div class="cont-left">
+      <div class="stock">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img src="https://cdn.discordapp.com/attachments/1118765599892455464/1122208714275958875/image.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex">
+              <div class="inleft">
+                <div class="product-name">Indian Thali</div>
+                <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+                <div class="product-rating"><img
+                    src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                    width="10%" alt="">&nbsp;Shyam Vihar, New Delhi</div>
+                <div class="product-price">
+                  <div class="product-price">Price <s>₹599/-</s> ₹99.00/-</div>
+                  <div class="product-offer">69% off</div>
+                </div>
+                <a href="#">
+                  <li class="button py-6">
+                    <span>Book Now</span>
+                  </li>
+                </a>
+              </div>
+              <div class="flex items-center">
+                <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                  <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                  <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">50 plates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img
+                src="https://cdn.discordapp.com/attachments/1118765599892455464/1122209054056517712/Punjabi-thali-WS-1-500x500.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex">
+              <div class="inleft">
+                <div class="product-name">Indian Custom</div>
+                <div class="product-discription">By Bittu Halwai</div>
+                <div class="product-rating"><img
+                    src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                    width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+                <div class="product-price">
+                  <div class="product-price">Price <s>₹799/-</s> ₹149.00/-</div>
+                  <div class="product-offer">59% off</div>
+                </div>
+                <a href="#">
+                  <li class="button py-6">
+                    <span>Book Now</span>
+                  </li>
+                </a>
+              </div>
+              <div class="flex items-center">
+                <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                  <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                  <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">150 plates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img
+                src="https://cdn.discordapp.com/attachments/1118765599892455464/1122210292340883466/RESTAURANT_STYLE_SOUTH_INDIAN_THALI_original.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex"><div class="inleft">
+              <div class="product-name">South Indian</div>
+              <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+              <div class="product-rating"><img
+                  src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                  width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+              <div class="product-price">
+                <div class="product-price">Price <s>₹799/-</s> ₹149.00/-</div>
+                <div class="product-offer">59% off</div>
+              </div>
+              <a href="#">
+                <li class="button py-6">
+                  <span>Book Now</span>
+                </li>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">40 plates</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div class="card">
+            <div class="product-image">
+              <img src="https://cdn.discordapp.com/attachments/1118765599892455464/1122211013882810368/image.png"
+                alt="Product-image">
+            </div>
+            <div class="card-inside flex"><div class="inleft">
+              <div class="product-name">Bahubali Thali</div>
+              <div class="product-discription">Lorem ipsum dolor sit amet.</div>
+              <div class="product-rating flex"><img
+                  src="https://cdn.discordapp.com/attachments/1118765599892455464/1122206805255274708/location-pin_318-891763.png"
+                  width="10%" alt="">&nbsp;Rajesh Park, New Delhi</div>
+              <div class="product-price">
+                <div class="product-price">Price <s>₹899/-</s> ₹149.00/-</div>
+                <div class="product-offer">59% off</div>
+              </div>
+              <a href="#">
+                <li class="button py-6">
+                  <span>Book Now</span>
+                </li>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <div class="inright w-32 h-32 bg-white hover:bg-green-50 rounded-lg">
+                <p class="px-4 pt-4 text-xl text-green-600 "><b>In Stock:</b></p>
+                <p class=" px-4 w-[60%] h-[60%] text-lg rounded-lg text-green-950">100 plates</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="cont-right mb-8">
+      <a href="#">
+        <li class="button py-6" style="width: 200px;">
+          <span>Add Stock</span>
+        </li>
+      </a>
+    </div> -->
+  </div>
+  <!-- Footer container below-->
+
+  <!-- footer container above -->
+
+  <script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+      // open
+      const burger = document.querySelectorAll('.navbar-burger');
+      const menu = document.querySelectorAll('.navbar-menu');
+
+      if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+          burger[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+
+      // close
+      const close = document.querySelectorAll('.navbar-close');
+      const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+      if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+
+      if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+          backdrop[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

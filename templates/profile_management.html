@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="shortcut icon"
+        href="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+        type="image/x-icon">
+    <!-- Include Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+    {% extends 'navfoot.html' %}
+    {% block content %}
+  <!-- nav below -->
+
+  <!-- nav above -->
+    <div class="container mx-auto p-4 w-1/2">
+        <h1 class="text-3xl font-semibold mb-6">Account Settings</h1>
+        <div class="flex items-center space-x-6 mb-6">
+            <div class="w-40 h-40 rounded-full overflow-hidden">
+                <img src="https://dspncdn.com/a1/media/692x/80/ae/44/80ae442a54a07b6619c3b742e47de046.jpg"
+                    alt="Profile Picture" class="w-full h-full object-cover">
+            </div>
+            <label for="profilePicture"
+                class="cursor-pointer bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300">Change
+                Picture</label>
+            <input type="file" id="profilePicture" class="hidden">
+        </div>
+        <form class="space-y-4">
+            <div>
+                <label for="fullName" class="block text-gray-700 font-medium">Full Name</label>
+                <input type="text" id="fullName" name="fullName"
+                    class="mt-1 p-2 block w-full rounded-md border-gray-300" value="Gulabo Sharma">
+            </div>
+            <div>
+                <label for="contact" class="block text-gray-700 font-medium">Contact Number</label>
+                <input type="tel" id="contact" name="contact" class="mt-1 p-2 block w-full rounded-md border-gray-300"
+                    value="+91 9999909891">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+                <input type="email" id="email" name="email" class="mt-1 p-2 block w-full rounded-md border-gray-300"
+                    value="gulabosharma@gmail.com">
+            </div>
+            <div>
+                <label for="address" class="block text-gray-700 font-medium">Street/ Locality</label>
+                <input id="address" name="address"
+                    class="mt-1 p-2 block w-full rounded-md border-gray-300" value="B-6/9, Ajauri Chowk"></input>
+            </div>
+            <div class="flex justify-between">
+                <div>
+                    <label for="pinCode" class="block text-gray-700 font-medium">Pin Code</label>
+                    <input type="text" id="pinCode" name="pinCode" class="mt-1 p-2 block w- rounded-md border-gray-300" value="862011">
+                </div>
+                <div>
+                    <label for="state" class="block text-gray-700 font-medium">State</label>
+                    <input type="text" id="state" name="state" class="mt-1 p-2 block w- rounded-md border-gray-300" value="West Bengal">
+                </div>
+                <div>
+                    <label for="city" class="block text-gray-700 font-medium">City</label>
+                    <input type="text" id="city" name="city" class="mt-1 p-2 block w- rounded-md border-gray-300" value="Kolkata">
+                </div>
+            </div>
+            <button type="submit"
+                class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300">Save
+                Changes</button>
+        </form>
+        <div class="my-8 border-t pt-4">
+            <h2 class="text-xl font-semibold mb-4">Additional Options</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><a href="#" class="text-orange-500 hover:underline">Change Password</a></li>
+                <li><a href="#" class="text-orange-500 hover:underline">Privacy Settings</a></li>
+                <li><a href="#" class="text-orange-500 hover:underline">Notification Preferences</a></li>
+                <li><a href="#" class="text-orange-500 hover:underline">Delete Account</a></li>
+                <li><a href="#" class="text-orange-500 hover:underline">Help & Support</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer below -->
+
+    <!-- footer above -->
+    {% endblock content %}
+</body>
+
+</html>

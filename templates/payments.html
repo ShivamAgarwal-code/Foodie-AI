@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+    <style>
+      .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 0.5rem center;
+        background-size: 1.5em 1.5em;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .submit-button:disabled {
+        cursor: not-allowed;
+        background-color: #D1D5DB;
+        color: #111827;
+      }
+
+      .submit-button:disabled:hover {
+        background-color: #9CA3AF;
+      }
+
+      .credit-card {
+        max-width: 420px;
+        margin-top: 3rem;
+      }
+
+      @media only screen and (max-width: 420px)  {
+        .credit-card .front {
+          font-size: 100%;
+          padding: 0 2rem;
+          bottom: 2rem !important;
+        }
+
+        .credit-card .front .number {
+          margin-bottom: 0.5rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50">
+    <div class="m-4 flex justify-center items-center">
+
+      <div>
+        <section class="body-font h-screen pt-10 text-gray-600" >
+          <div class="container mx-auto mt-10 flex max-w-3xl flex-wrap justify-center rounded-lg bg-white px-5 py-24" style="box-shadow: -2px 2px 4px black; outline: 1px dashed black;">
+    <div class="flex-wrap md:flex">
+      <div class="mx-auto">
+        <img class="mx-auto mt-12 h-52 w-52 rounded-lg border p-2 md:mt-0" src="https://cdn.discordapp.com/attachments/1118765612332748871/1140132078827090040/GokFR5NFwnNCFcQo4tri8ZPzbpu_qhnEdxNcPE7hSgF8Glq_v6VycZxurMmm_aP2pHs.png" alt="step" />
+        <div>
+          <h1 class="font-laonoto mt-4 text-center text-xl font-bold ">UPI Payment</h1>
+          <p class="mt-3 text-center font-semibold text-gray-600">Aaditya Pratap Sharma</p>
+          <p class="mt-2 text-center font-medium text-red-500">XXXX-XXXX-XXXX-2001</p>
+        </div>
+        <button class=" my-auto mt-5 mx-auto block rounded-md border bg-blue-500 px-6 py-2 text-white font-semibold outline-none hover:bg-blue-800">Proceed</button>
+      </div>
+      <div class="mt-8 max-w-sm md:mt-0 md:ml-10 md:w-2/3">
+        <div class="relative flex pb-12">
+          <div class="absolute inset-0 flex h-full w-10 items-center justify-center">
+            <div class="pointer-events-none h-full w-1 bg-gray-200"></div>
+          </div>
+          <div class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+            <h1 class="hover:text">
+              <b>1</b>
+            </h1>
+          </div>
+          <div class="flex-grow pl-4">
+            <h2 class="title-font mb-1 text-sm font-medium tracking-wider text-gray-900">STEP 1</h2>
+            <p class="font-laonoto leading-relaxed">
+              Scan the Yo Bawarchi <br />
+              <b>QR CODE </b>
+            </p>
+          </div>
+        </div>
+        <div class="relative flex pb-12">
+          <div class="absolute inset-0 flex h-full w-10 items-center justify-center">
+            <div class="pointer-events-none h-full w-1 bg-gray-200"></div>
+          </div>
+          <div class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+            <h1>
+              <b>2</b>
+            </h1>
+          </div>
+          <div class="flex-grow pl-4">
+            <h2 class="title-font mb-1 text-sm font-medium tracking-wider text-gray-900">STEP 2</h2>
+            <p class="font-laonoto leading-relaxed">Please be patient and wait for gateway. <b>Do not refresh/go back</b>.</p>
+          </div>
+        </div>
+        <div class="relative flex pb-12">
+          <div class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+            <h1>
+              <b>3</b>
+            </h1>
+          </div>
+          <div class="flex-grow pl-4">
+            <h2 class="title-font mb-1 text-sm font-medium tracking-wider text-gray-900">STEP 3</h2>
+            <p class="font-laonoto leading-relaxed">
+              Enter the amount to be paid for <span> <b>Payments</b></span
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </div>
+      
+      <div class="credit-card w-full shadow-lg rounded-xl bg-white ml-10" style="box-shadow: -2px 2px 4px black; outline: 1px dashed black;" x-data="creditCard">
+        <header class="flex flex-col justify-center items-center">
+          <div
+            class="relative"
+            x-show="card === 'front'"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+          >
+            <img class="w-full h-auto mt-10" src="https://cdn.discordapp.com/attachments/1118765612332748871/1140140204540305528/consumer-niyo.png" alt="front credit card">
+            <div style="text-shadow: 3px 3px 3px black;" class="front bg-transparent text-lg w-full text-white font-extralight px-12 relative right-6 bottom-20">
+              <p class="number mb-1 sm:text-xl " x-text="cardNumber !== '' ? cardNumber : '0000 0000 0000 0000'"></p>
+              <div class="flex flex-row justify-between">
+                <p x-text="cardholder !== '' ? cardholder : 'Card holder'"></p>
+                <div class="">
+                  <span x-text="expired.month"></span>
+                  <span x-show="expired.month !== ''">/</span>
+                  <span x-text="expired.year"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative"
+            x-show="card === 'back'"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+          >
+            <img class="w-full h-auto mt-10 mb-16" src="https://cdn.discordapp.com/attachments/1118765612332748871/1140147594266419340/consumer-niyo.png" alt="">
+            <div
+              class=" text-white text-xl w-full flex justify-end absolute bottom-20 px-8  sm:bottom-24 right-0 sm:px-12"
+            >
+              <div style="text-shadow: 3px 3px 3px black;" class="front text-lg w-full text-white font-extralight px-12 relative left-12 -top-6 bg-slate-200">
+                <p x-text="securityCode !== '' ? securityCode : 'code'"></p>
+              </div>
+            </div>
+          </div>
+          <ul class="flex">
+            <li class="mx-2">
+              <img class="w-16" src="https://www.computop-paygate.com/Templates/imagesaboutYou_desktop/images/computop.png" alt="" />
+            </li>
+            <li class="mx-2">
+              <img class="w-14" src="https://www.computop-paygate.com/Templates/imagesaboutYou_desktop/images/verified-by-visa.png" alt="" />
+            </li>
+            <li class="ml-5">
+              <img class="w-7" src="https://www.computop-paygate.com/Templates/imagesaboutYou_desktop/images/mastercard-id-check.png" alt="" />
+            </li>
+          </ul>
+        </header>
+        <main class="mt-8 p-5">
+          <h1 class="text-xl font-semibold text-gray-700 text-center hover:text-red-800">Card payment</h1>
+          <div class="">
+            <div class="my-3">
+              <input
+                type="text"
+                class="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                placeholder="Card holder"
+                maxlength="22"
+                x-model="cardholder"
+              />
+            </div>
+            <div class="my-3">
+              <input
+                type="text"
+                class="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                placeholder="Card number"
+                x-model="cardNumber"
+                x-on:keydown="format()"
+                x-on:keyup="isValid()"
+                maxlength="19"
+              />
+            </div>
+            <div class="my-3">
+              <input
+                type="text"
+                class="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                placeholder="Enter Amount to be debited (₹)"
+                maxlength="22" 
+                x-model="cardholder"
+              />
+            </div>
+            <div class="my-3 flex flex-col">
+              <div class="mb-2">
+                <label for="" class="text-gray-700">Expired</label>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <select
+                  name=""
+                  id=""
+                  class="form-select appearance-none block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                  x-model="expired.month"
+                >
+                  <option value="" selected disabled>MM</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <select
+                  name=""
+                  id=""
+                  class="form-select appearance-none block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                  x-model="expired.year"
+                >
+                  <option value="" selected disabled>YY</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                </select>
+                <input
+                  type="text"
+                  class="block w-full col-span-2 px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
+                  placeholder="Security code"
+                  maxlength="3"
+                  x-model="securityCode"
+                  x-on:focus="card = 'back'"
+                  x-on:blur="card = 'front'"
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="mt-6 p-4">
+          <button
+            class="submit-button px-4 py-3 rounded-full bg-blue-300 text-blue-900 focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
+            x-bind:disabled="!isValid"
+            x-on:click="onSubmit()"
+          >
+            Pay now
+          </button>
+        </footer>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("creditCard", () => ({
+          init() {
+            console.log('Component mounted');
+          },
+          format() {
+            if (this.cardNumber.length > 18) {
+              return;
+            }
+            this.cardNumber = this.cardNumber.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+          },
+          get isValid() {
+            if (this.cardholder.length < 5) {
+              return false;
+            }
+            if (this.cardNumber === '') {
+              return false;
+            }
+            if (this.expired.month === '' && this.expired.year === '') {
+              return false;
+            }
+            if (this.securityCode.length !== 3) {
+              return false;
+            }
+            return true;
+          },
+          onSubmit() {
+            alert(`You did it ${this.cardholder}.`);
+          },
+          cardholder: '',
+          cardNumber: '',
+          expired: {
+            month: '',
+            year: '',
+          },
+          securityCode: '',
+          card: 'front',
+        }));
+      });
+    </script>
+  </body>
+</html>

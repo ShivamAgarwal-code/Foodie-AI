@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Offers - Yo! Bawarchi</title>
+    <link rel="shortcut icon"
+        href="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+        type="image/x-icon">
+    <!-- Include Tailwind CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <!-- below proifle button in nav -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    {% extends 'navfoot.html' %}
+    {% block content %}
+    <!-- nav below -->
+
+    <!-- nav above -->
+    <div class="container mx-auto px-4 py-8">
+
+        <h1 class="text-3xl font-semibold text-center text-orange-500 mb-8 hover:text-orange-600 cursor-pointer">Offers
+            of the Day</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Discount Offer -->
+            <div
+                class="bg-white rounded-md shadow-md p-6 flex flex-col items-center hover:outline-orange-500 hover:outline-4">
+                <i class="fas fa-tags text-4xl text-orange-500 mb-4"></i>
+                <h2 class="text-lg font-semibold mb-2">Discount Offer</h2>
+                <p class="text-gray-600 mb-4">Get 20% off on all orders this weekend!</p>
+                <a href="#" class="text-orange-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Special Package -->
+            <div class="bg-white rounded-md shadow-md p-6 flex flex-col items-center">
+                <i class="fas fa-gift text-4xl text-orange-500 mb-4"></i>
+                <h2 class="text-lg font-semibold mb-2">Special Package</h2>
+                <p class="text-gray-600 mb-4">Try our exclusive party package for only $99.</p>
+                <a href="#" class="text-orange-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Limited-Time Deal -->
+            <div class="bg-white rounded-md shadow-md p-6 flex flex-col items-center">
+                <i class="fas fa-clock text-4xl text-orange-500 mb-4"></i>
+                <h2 class="text-lg font-semibold mb-2">Limited-Time Deal</h2>
+                <p class="text-gray-600 mb-4">Hurry! Get a free dessert with every order today.</p>
+                <a href="#" class="text-orange-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Combo Offer -->
+            <div class="bg-white rounded-md shadow-md p-6 flex flex-col items-center">
+                <i class="fas fa-utensils text-4xl text-orange-500 mb-4"></i>
+                <h2 class="text-lg font-semibold mb-2">Combo Offer</h2>
+                <p class="text-gray-600 mb-4">Try our meal combo with a drink for just $12.</p>
+                <a href="#" class="text-orange-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Add more cards for additional offer types -->
+
+        </div>
+
+
+        <div class="container mx-auto px-4 py-8">
+
+            <h1 class="text-3xl font-semibold text-center text-orange-500 mb-8 hover:text-orange-600 cursor-pointer">
+                Discount Offers</h1>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border border-orange-500 rounded-md">
+                    <thead class="bg-orange-500 text-white">
+                        <tr>
+                            <th class="py-2 px-4 text-left">Offer</th>
+                            <th class="py-2 px-4 text-left">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-orange-500">
+                        <tr class="hover:bg-orange-50">
+                            <td class="py-2 px-4">Get 20% off</td>
+                            <td class="py-2 px-4">On all orders this weekend!</td>
+                        </tr>
+                        <tr class="hover:bg-orange-50">
+                            <td class="py-2 px-4">Flash Sale</td>
+                            <td class="py-2 px-4">Enjoy 30% off select items for 24 hours.</td>
+                        </tr>
+                        <!-- Add more rows for additional offers -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-semibold text-center text-orange-500 mb-8 hover:text-orange-600 cursor-pointer">
+                Special Packages</h1>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-orange-500">
+                    <thead>
+                        <tr class="bg-orange-500">
+                            <th class="py-2 px-4 text-left text-white font-semibold">Package</th>
+                            <th class="py-2 px-4 text-left text-white font-semibold">Description</th>
+                            <th class="py-2 px-4 text-left text-white font-semibold">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-orange-500">
+                        <tr class="bg-white hover:bg-orange-50">
+                            <td class="py-2 px-4">Ultimate Family Feast Package</td>
+                            <td class="py-2 px-4">Treat your family to a delicious feast for any occasion.</td>
+                            <td class="py-2 px-4">₹699/-</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-orange-50">
+                            <td class="py-2 px-4">Premium Dinner for Two</td>
+                            <td class="py-2 px-4">Enjoy a romantic dinner for two with wine pairing.</td>
+                            <td class="py-2 px-4">₹599/-</td>
+                        </tr>
+                        <!-- Add more rows for the rest of the special packages -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-semibold text-center text-orange-500 mb-8 hover:text-orange-600 cursor-pointer">
+                Combo Offers</h1>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-orange-500">
+                    <thead>
+                        <tr class="bg-orange-500">
+                            <th class="py-2 px-4 text-left text-white font-semibold">Combo</th>
+                            <th class="py-2 px-4 text-left text-white font-semibold">Description</th>
+                            <th class="py-2 px-4 text-left text-white font-semibold">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-orange-500">
+                        <tr class="bg-white hover:bg-orange-50">
+                            <td class="py-2 px-4">Quick Lunch Combo</td>
+                            <td class="py-2 px-4">Get a sandwich, side salad, and a beverage.</td>
+                            <td class="py-2 px-4">₹299/-</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-orange-50">
+                            <td class="py-2 px-4">Family Pizza Night</td>
+                            <td class="py-2 px-4">Enjoy a large pizza, garlic bread, and a soda.</td>
+                            <td class="py-2 px-4">₹699/-</td>
+                        </tr>
+                        <!-- Add more rows for the rest of the combo offers -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer below -->
+
+
+        <!-- footer above -->
+        {% endblock content %}
+</body>
+
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+        type="image/x-icon">
+    <title>Yo! Bawarchi - Taste for all Occasion</title>
+    <style>
+        :root {
+            --main-color: #4a76a8;
+        }
+
+        .bg-main-color {
+            background-color: var(--main-color);
+        }
+
+        .text-main-color {
+            color: var(--main-color);
+        }
+
+        .border-main-color {
+            border-color: var(--main-color);
+        }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <!-- below proifle button in nav -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="bg-white text-orange-950">
+    {% extends 'navfoot.html' %}
+  {% block content %}
+    <div class="bg-gray-50 h-full">
+        <div class="container mx-auto my-5 p-5">
+            <div class="md:flex no-wrap md:-mx-2 ">
+                <!-- Left Side -->
+                <div class="w-full md:w-3/12 md:mx-2">
+                    <!-- filter Card -->
+                    <div class="bg-white p-3 border-t-4 border-orange-400">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="filter">
+                                <path fill="#000" fill-rule="evenodd"
+                                    d="M20 5h-1.17a3.001 3.001 0 0 0-5.66 0H4a1 1 0 0 0 0 2h9.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2zm-4 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM3 12a1 1 0 0 1 1-1h1.17a3.001 3.001 0 0 1 5.66 0H20a1 1 0 1 1 0 2h-9.17a3.001 3.001 0 0 1-5.66 0H4a1 1 0 0 1-1-1zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-4 4a1 1 0 1 0 0 2h9.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-1.17a3.001 3.001 0 0 0-5.66 0H4zm13 1a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <h1 class="ml-2 text-lg font-semibold">Filter</h1>
+                        </div>
+                        <div class="veg">
+                            <button class="flex ml-0.5">
+                                <i class="mr-2"><svg viewBox="0 0 18 18" width="22px">
+                                        <path
+                                            d="M16.9 5.6c-.2-.2-.5-.2-.7 0L9 12.8 1.8 5.6c-.2-.2-.5-.2-.7 0s-.2.5 0 .7l7.5 7.5v.1c.1.1.3.1.4.1.1 0 .3 0 .4-.1v-.1l7.5-7.5c.2-.2.2-.5 0-.7z">
+                                        </path>
+                                    </svg></i>
+                                <legend>Per plate (veg) (Caterers)</legend>
+                            </button>
+                            <ul class="mx-8">
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox" type="checkbox" value="500"
+                                            class="select cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">Under
+                                            ₹500</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox1" type="checkbox" value="1000"
+                                            class="select cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox1"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹500 - ₹1000</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox2" type="checkbox" value="2500"
+                                            class="select cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox2"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹1000 - ₹2500</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox3" type="checkbox" value="5000"
+                                            class="select cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox3"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹2500 and ₹5000</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox4" type="checkbox" value="10000"
+                                            class="select cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox4"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹5000 and above</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="non-veg">
+                            <button class="flex ml-0.5">
+                                <i class="mr-2"><svg viewBox="0 0 18 18" width="22px">
+                                        <path
+                                            d="M16.9 5.6c-.2-.2-.5-.2-.7 0L9 12.8 1.8 5.6c-.2-.2-.5-.2-.7 0s-.2.5 0 .7l7.5 7.5v.1c.1.1.3.1.4.1.1 0 .3 0 .4-.1v-.1l7.5-7.5c.2-.2.2-.5 0-.7z">
+                                        </path>
+                                    </svg></i>
+                                <legend>Per plate (non-veg) (Caterers)</legend>
+                            </button>
+                            <ul class="mx-8">
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-1" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-1"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">Under
+                                            ₹500</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-2" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-2"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹500 - ₹1000</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-3" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-3"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹1000 - ₹2500</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-4" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-4"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹2500 and ₹5000</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-5" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-5"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">
+                                            ₹5000 and above</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu">
+                            <button class="flex ml-0.5">
+                                <i class="mr-2"><svg viewBox="0 0 18 18" width="22px">
+                                        <path
+                                            d="M16.9 5.6c-.2-.2-.5-.2-.7 0L9 12.8 1.8 5.6c-.2-.2-.5-.2-.7 0s-.2.5 0 .7l7.5 7.5v.1c.1.1.3.1.4.1.1 0 .3 0 .4-.1v-.1l7.5-7.5c.2-.2.2-.5 0-.7z">
+                                        </path>
+                                    </svg></i>
+                                <legend>Menu (Caterers)</legend>
+                            </button>
+                            <ul class="mx-8">
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-i" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-i"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">North
+                                            Indian/ Mughlai</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-ii" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-ii"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">South
+                                            Indian</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-iii" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-iii"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">Chinese</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-iv" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-iv"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">Italian/
+                                            european/ continental</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox-v" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox-v"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">Others</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="location">
+                            <button class="flex ml-0.5">
+                                <i class="mr-2"><svg viewBox="0 0 18 18" width="22px">
+                                        <path
+                                            d="M16.9 5.6c-.2-.2-.5-.2-.7 0L9 12.8 1.8 5.6c-.2-.2-.5-.2-.7 0s-.2.5 0 .7l7.5 7.5v.1c.1.1.3.1.4.1.1 0 .3 0 .4-.1v-.1l7.5-7.5c.2-.2.2-.5 0-.7z">
+                                        </path>
+                                    </svg></i>
+                                <legend>Nearby Caters</legend>
+                            </button>
+                            <ul class="mx-8">
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox--i" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox--i"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">within
+                                            2KM</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox--ii" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox--ii"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">2KM
+                                            to 5KM</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox--iii" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox--iii"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">5KM
+                                            to 10KM</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center my-2">
+                                        <input id="default-checkbox--iv" type="checkbox" value=""
+                                            class=" cursor-pointer w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-200">
+                                        <label for="default-checkbox--iv"
+                                            class="ml-2 text-sm font-medium text-orange-950 focus:text-orange-700 cursor-pointer">10KM
+                                            and above</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End of filter card -->
+
+                    <!-- decoration company -->
+                    <div class="my-4"></div>
+                    <!-- advertisement card -->
+                    <div class="my-4"></div>
+                    <div class="bg-white p-3 hover:shadow flex items-center justify-center">
+                        <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126884021759131758/Frame_4_1.png"
+                            alt="">
+                    </div>
+                    <!-- end of advertisement card -->
+                    <!-- end of decoration company -->
+                    <div class="my-4"></div>
+
+                </div>
+                <!-- Right Side -->
+                <div class="w-full md:w-9/12 mx-2 text-base">
+                    <!-- Cater list -->
+                    <!-- cater 1 -->
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775687097110638/4hw4aqgs.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Bittu&nbspHalwai</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Shyam Vihar, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹600</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 mr-1 dark:text-gray-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4 out of 5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="profile"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775690142158949/wk3m8wmj.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Aggarwal' Caters</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Shyam Vihar, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹399</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 mr-1 dark:text-gray-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4 out of 5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="/profile.html"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775687097110638/4hw4aqgs.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Bittu&nbspHalwai</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Shyam Vihar, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹4449</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 mr-1 dark:text-gray-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4 out of 5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="/profile.html"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cater 1 end -->
+
+                    <div class="my-4"></div>
+                    <!-- cater 1 -->
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775689794048071/vmqpkwfi.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Gulabo&nbspCatering&nbspServies</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Preet Vihar, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹600</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4.9 out of
+                                            5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="#"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cater 1 end -->
+                    <div class="my-4"></div>
+                    <!-- cater 1 -->
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118775688749666335/gl7chy65.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Ritwick Halwai</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Botanical Garden, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹6000</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 mr-1 dark:text-gray-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4 out of 5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="#"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cater 1 end -->
+                    <div class="my-4"></div>
+                    <!-- cater 1 -->
+                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                        <ul>
+                            <li class="flex justify-center items-center">
+                                <div class="w-1/2 "><img
+                                        src="https://cdn.discordapp.com/attachments/1118765612332748871/1118812440055001159/931kdtvv.png"
+                                        alt="..." class="rounded-xl w-max">
+                                </div>
+                                <div class="ml-4">
+                                    <h1 class="font-bold text-4xl my-4">Sushobhan Joshi</h1>
+                                    <p class="flex my-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            class="-ml-1" id="location">
+                                            <path fill="#000" fill-rule="evenodd"
+                                                d="M19 9a6.968 6.968 0 0 1-1.252 3.996h.002l-4.907 7.684a1 1 0 0 1-1.686 0l-4.883-7.653A7 7 0 1 1 19 9Zm-7 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Chaoudhary Enclave, New Delhi</span>
+                                    </p>
+                                    <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                        necessitatibus
+                                        nam molestiae voluptas ipsa, culpa accusantium minus voluptatibus, magni
+                                        delectus fuga illum cupiditate rem distinctio aut neque similique ullam
+                                        consequuntur?</p>
+                                    <p class="flex my-4">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 47 42" width="25px" class="mr-2">
+                                                <path
+                                                    d="M31.336 4.949c0 3.075-6.897 4.917-15.591 4.917C7.05 9.866.15 8.024.15 4.949.151 1.875 7.054.032 15.745.032c8.691 0 15.591 1.843 15.591 4.917zm-2 0c0-.41-1.24-1.195-3.545-1.81-2.626-.702-6.215-1.107-10.046-1.107-3.83 0-7.42.405-10.047 1.106-2.306.616-3.547 1.402-3.547 1.81 0 .411 1.24 1.196 3.547 1.812 2.627.701 6.216 1.106 10.047 1.106 3.831 0 7.42-.405 10.046-1.106 2.306-.615 3.545-1.4 3.545-1.811zm0 0a1 1 0 012 0v5.483c0 3.164-6.874 4.917-15.591 4.917C7.025 15.35.15 13.596.15 10.432V4.95a1 1 0 112 0v5.483c0 .47 1.273 1.262 3.664 1.871 2.614.667 6.186 1.046 9.93 1.046 3.742 0 7.314-.38 9.928-1.046 2.39-.61 3.663-1.4 3.663-1.87V4.948zM15.512 31.754C6.908 31.723.152 29.972.152 26.837V15.941v-5.554a1 1 0 112 0v5.508c.044.472 1.314 1.246 3.663 1.846 2.615.667 6.187 1.046 9.93 1.046 3.741 0 7.313-.38 9.928-1.046 2.371-.605 3.643-1.39 3.663-1.86v-.011-5.482a1 1 0 012 0v10.75c8.583.032 15.36 1.87 15.36 4.916V37.02c0 3.164-6.873 4.917-15.593 4.917-8.717 0-15.59-1.753-15.59-4.917v-5.267zm0-2V26.27c-5.787-.02-10.738-.82-13.36-2.294v2.861c0 .47 1.274 1.26 3.664 1.87 2.56.653 6.04 1.031 9.696 1.047zm2 1.04v.743c0 .47 1.274 1.26 3.663 1.87 2.615.667 6.187 1.047 9.928 1.047 3.743 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.903c-2.66 1.495-7.717 2.337-13.594 2.337-5.874 0-10.93-.842-13.59-2.338v2.064a1.018 1.018 0 010 .096zm11.824-9.63v-2.671c-2.657 1.494-7.705 2.294-13.591 2.294-5.887 0-10.936-.8-13.593-2.294v2.861c0 .469 1.274 1.26 3.664 1.87 2.614.667 6.186 1.047 9.928 1.047.207 0 .42-.003.657-.007 1.945-1.812 6.888-2.92 12.935-3.1zm.811 1.982a1.004 1.004 0 01-.157.003c-3.407.07-6.562.461-8.932 1.094-1.807.483-2.96 1.07-3.374 1.498-.04.072-.088.138-.143.197a.28.28 0 00-.029.116c0 .41 1.24 1.195 3.546 1.81 2.627.702 6.216 1.107 10.045 1.107 3.832 0 7.422-.405 10.048-1.107 2.306-.615 3.546-1.4 3.546-1.81 0-.41-1.24-1.195-3.546-1.81-2.626-.702-6.216-1.107-10.048-1.107-.32 0-.64.003-.956.009zm14.55 11.013c-2.657 1.495-7.706 2.295-13.594 2.295-5.886 0-10.935-.8-13.59-2.295v2.862c0 .47 1.272 1.26 3.662 1.87 2.614.667 6.186 1.047 9.928 1.047 3.744 0 7.316-.38 9.93-1.047 2.39-.61 3.664-1.4 3.664-1.87v-2.862z"
+                                                    fill-rule="nonzero"></path>
+                                            </svg>
+                                            <span class="price">From ₹1299</span></span>
+                                        <span class="flex mr-4">
+                                            <svg viewBox="0 0 32 23" width="25px" class="mr-2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 15.46A9.412 9.412 0 000 22.18c0 .414.336.75.75.75h30.5a.75.75 0 00.75-.75 9.412 9.412 0 00-16-6.721zm-.163 2.104c.048.089.094.179.14.27l.023-.036a7.866 7.866 0 011.289 3.634H1.535a7.913 7.913 0 0114.302-3.868zm2.957 3.867a9.362 9.362 0 00-1.808-4.837 7.913 7.913 0 0113.479 4.838H18.794zM15.192 6.04a5.868 5.868 0 10-11.737 0 5.868 5.868 0 0011.737 0zm-10.237 0a4.369 4.369 0 118.737 0 4.369 4.369 0 01-8.737 0zM22.5.17a5.868 5.868 0 110 11.737A5.868 5.868 0 0122.5.17zm0 1.5a4.369 4.369 0 100 8.737 4.369 4.369 0 000-8.737z">
+                                                </path>
+                                            </svg>
+                                            <span>50 to 1000</span>
+                                        </span>
+                                    </p>
+                                    <p class="my-4">
+
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 mr-1 dark:text-gray-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                            <path
+                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                        </svg>
+                                        <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4 out of 5
+                                        </p>
+
+                                    </div>
+                                    <div class="flex justify-end -mt-10">
+                                        <a href="#"
+                                            class="flex p-0.5 mb-2 mr-0 overflow-hidden text-base font-medium hover:text-white text-black focus:text-black rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                                            <span
+                                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cater 1 end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer container below-->
+
+    <!-- footer above -->
+<!--     <script src="home.js"></script> -->
+    <script>
+        const cardPrices = document.querySelectorAll(".price");
+const selection = document.querySelectorAll(".select");
+
+selection.forEach((select) => {
+  select.addEventListener("change", () => {
+    if(select.checked){
+    const selectedValue = parseInt(select.value);
+    console.log(selectedValue)
+    compare(selectedValue);}
+  });
+});
+
+const compare = (value) => {
+  cardPrices.forEach((cardPrice) => {
+    let parent=cardPrice.parentNode.parentNode.parentNode.parentNode.parentNode;
+    parent.classList.remove("hidden");
+    let price_full=cardPrice.textContent.slice(6,);
+    const price = parseInt(price_full);
+    console.log(price)
+    if (price < value) {
+      cardPrice.classList.add("red");
+    } else {
+      parent.classList.add("hidden");
+    }
+  });
+};
+
+
+    </script>
+    {% endblock content %}
+</body>
+<script>
+    // Initialization for ES Users
+    import {
+        Carousel,
+        initTE,
+    } from "tw-elements";
+
+    initTE({ Carousel });
+</script>
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+
+</html>

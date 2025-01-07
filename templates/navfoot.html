@@ -1,0 +1,476 @@
+    <!-- nav below -->
+<nav class="relative px-4 py-2 flex justify-between items-center bg-orange-100">
+    <a class="text-3xl font-bold leading-none flex items-center" href="home">
+        <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+            alt="logo" class="w-16">
+        <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126863926777348156/Frame_1_1.png"
+            alt="logo-name" class="h-12">
+        <!-- <svg class="h-10" alt="logo" viewBox="0 0 10240 10240">
+            <path xmlns="http://www.w3.org/2000/svg" d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z"></path>
+        </svg> -->
+    </a>
+    <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-orange-900 p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </button>
+    </div>
+    <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:fle lg:items-center lg:w-auto lg:space-x-6">
+        <li><a class="text-base text-orange-600 hover:text-orange-950 font-bold" href="home">Home</a></li>
+        <li class="text-orange-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+        </li>
+        <li><a class="text-base text-orange-600 font-bold" href="orderhistory">Order History</a></li>
+        <li class="text-orange-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+        </li>
+        <li><a class="text-base text-orange-600 hover:text-orange-950 font-bold" href="emergency">Emergency</a></li>
+        <li class="text-orange-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+        </li>
+        <li><a class="text-base text-orange-600 hover:text-orange-950 font-bold" href="offers">Offers</a></li>
+        <li class="text-orange-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+        </li>
+        <li><a class="text-base text-orange-600 hover:text-orange-950 font-bold" href="feedback">Contact Us</a></li>
+    </ul>
+    <!-- <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-[#FFF9F5] hover:bg-orange-600 hover:text-white text-sm text-orange-950 font-bold  transition duration-200" href="#">Sign In</a>
+    <a class="hidden lg:inline-block py-2 px-6 bg-orange-600 hover:bg-orange-700 text-sm text-white font-bold transition duration-200" href="#">Sign up</a> -->
+    <div  class="bell flex -mx-2 items-center">
+        <div>
+
+            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+                class="inline-flex items-center text-sm font-medium text-center text-slate-700 hover:text-orange-900 focus:outline-none"
+                type="button">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 14 20">
+                    <path
+                        d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z" />
+                </svg>
+                <div class="relative flex">
+                    <div
+                        class="relative inline-flex w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-2 right-3">
+                    </div>
+                </div>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNotification"
+                class="z-50 hidden w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow"
+                aria-labelledby="dropdownNotificationButton">
+                <div
+                    class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50">
+                    Notifications
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="https://cdn.discordapp.com/attachments/1126112141544534056/1126849935271280652/image.png"
+                                alt="Jese image">
+                            <div
+                                class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-blue-600 border border-white rounded-full">
+                                <svg class="w-2 h-2 text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                                    <path
+                                        d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z" />
+                                    <path
+                                        d="M4.439 9a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5">New message from <span
+                                    class="font-semibold">Jese Leos</span>: "Hey,
+                                what's up? All set for the presentation?"</div>
+                            <div class="text-xs text-orange-600 ">a few moments ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="https://cdn.discordapp.com/attachments/1126112141544534056/1126849934780543056/image.png"
+                                alt="Joseph image">
+                            <div
+                                class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full">
+                                <svg class="w-2 h-2 text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                    <path
+                                        d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5"><span
+                                    class="font-semibold text-gray-900">Joseph Mcfall</span> and
+                                <span class="font-medium text-gray-900">5 others</span> started
+                                following you.</div>
+                            <div class="text-xs text-orange-600">10 minutes ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="https://cdn.discordapp.com/attachments/1126112141544534056/1126849935023808522/image.png"
+                                alt="Bonnie image">
+                            <div
+                                class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-2 h-2 text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                    <path
+                                        d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                    class="font-semibold text-gray-900">Bonnie Green</span> and
+                                <span class="font-medium text-gray-900">141 others</span> love your
+                                story. See it and view more stories.</div>
+                            <div class="text-xs text-orange-600">44 minutes ago</div>
+                        </div>
+                    </a>
+                </div>
+                <a href="#"
+                    class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 ">
+                    <div class="inline-flex items-center ">
+                        <svg class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+                            <path
+                                d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
+                        </svg>
+                        View all
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+
+            <button @click="open = !open"
+                class="flex flex-row items-center space-x-2 w-full px-4 py-2 mt-2 text-base font-semibold text-left bg-transparent hover:bg-orange-50 md:w-auto md:inline md:mt-0 md:ml-4  focus:bg-orange-50 focus:outline-none text-orange-950">
+                <span>Sonu Sharma</span>
+                <img class="inline h-7 rounded-full"
+                    src="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png">
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                    class="inline w-4 h-4 transition-transform duration-200 transform">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute right-0 w-full mt-5 origin-top-right rounded-md shadow-lg md:w-[91%]">
+                <div
+                    class="py- bg-white text-orange-950 font-semibold text-sm rounded-sm borde border-maincolor shadow-sm">
+                    <a class="block px-4 py-2 mt-2 text-sm bg-orange-50 md:mt-0 focus:text-orange-900 hover:bg-orange-100 focus:bg-orange-200 focus:outline-none"
+                        href="profile_management">Account Settings</a>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-orange-50 md:mt-0 focus:text-orange-900 hover:bg-orange-100 focus:bg-orange-200 focus:outline-none"
+                        href="feedback">Help Center</a>
+                    <div class="border-b"></div>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-orange-50 md:mt-0 focus:text-orange-900 hover:bg-orange-100 focus:bg-orange-200 focus:outline-none"
+                        href="signout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="navbar-menu relative z-50 hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none flex items-center" href="#">
+                <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+                    alt="logo" class="w-11">
+                <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126112213351010406/Yo_Bawarchi-1.png"
+                    alt="logo-name" class="h-6">
+                <!-- <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z"></path>
+                </svg> -->
+            </a>
+            <button class="navbar-close">
+                <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div>
+            <ul>
+                <li class="mb-1">
+                    <a class="block p-4 text-base font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-950 rounded"
+                        href="home.html">Home</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-base font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-950 rounded"
+                        href="#">Order History</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-base font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-950 rounded"
+                        href="#">Emergency</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-base font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-950 rounded"
+                        href="#">Offers</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-base font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-950 rounded"
+                        href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-auto">
+            <div class="pt-6">
+                <a class="block px-4 py-3 mb-3 leading-loose text-base text-center font-semibold text-orange-950 bg-orange-50 hover:bg-orange-600  hover:text-white rounde"
+                    href="#">Sign in</a>
+                <a class="block px-4 py-3 mb-2 leading-loose text-base text-center text-white font-semibold bg-orange-600 hover:bg-orange-700  rounde"
+                    href="#">Sign Up</a>
+            </div>
+            <p class="my-4 text-xs text-center text-gray-400">
+                <span>Copyright © 2023</span>
+            </p>
+        </div>
+    </nav>
+</div>
+
+<!-- nav above -->
+{% block content %}{% endblock content %}
+
+<!-- Footer container below -->
+<footer class="bg-orange-50 text-center text-neutral-600lg:text-left">
+    <div class="flex items-center justify-center border-b-2 border-orange-500 p-6 lg:justify-between">
+        <div class="mr-12 hidden lg:block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Social network icons container -->
+        <div class="flex justify-center">
+            <a href="#!" class="mr-6 text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                </svg>
+            </a>
+            <a href="#!" class="mr-6 text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+            </a>
+            <a href="#!" class="mr-6 text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
+                        fill-rule="evenodd" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="#!" class="mr-6 text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            </a>
+            <a href="#!" class="mr-6 text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                </svg>
+            </a>
+            <a href="#!" class="text-orange-600 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
+    <div class="mx-6 py-10 text-center md:text-left">
+        <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Tailwind Elements section -->
+            <div class="">
+                <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+
+                    <a class="text-3xl font-bold leading-none flex items-center" href="#">
+                        <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126112212583460864/logo.png"
+                            alt="logo" class="w-16">
+                        <img src="https://cdn.discordapp.com/attachments/1126112141544534056/1126863926777348156/Frame_1_1.png"
+                            alt="logo-name" class="h-12">
+                        <!-- <svg class="h-10" alt="logo" viewBox="0 0 10240 10240">
+                <path xmlns="http://www.w3.org/2000/svg" d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z"></path>
+            </svg> -->
+                    </a>
+                </h6>
+                <p>
+                    We provide best class catering services in the city, with a wide range of cuisines and dishes to
+                    choose from and a very affordable price.
+                </p>
+            </div>
+            <!-- Products section -->
+            <div class="">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                    Services
+                </h6>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Help you find perfect cater</a>
+                </p>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Giving you past reviews</a>
+                </p>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Energecy Catering Services</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-neutral-600 ">Food Wastage Management</a>
+                </p>
+            </div>
+            <!-- Useful links section -->
+            <div class="">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                    Useful links
+                </h6>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Offers</a>
+                </p>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Accoount Settings</a>
+                </p>
+                <p class="mb-4">
+                    <a href="#!" class="text-neutral-600 ">Orders</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-neutral-600 ">Help Center</a>
+                </p>
+            </div>
+            <!-- Contact section -->
+            <div>
+                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                    Contact
+                </h6>
+                <p class="mb-4 flex items-center justify-center md:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="mr-3 h-5 w-5">
+                        <path
+                            d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path
+                            d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                    </svg>
+                    IISER Kolkata Mohanpur, Nadia, West Bengal 741246
+                </p>
+                <p class="mb-4 flex items-center justify-center md:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="mr-3 h-5 w-5">
+                        <path
+                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path
+                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                    info@example.com
+                </p>
+                <p class="mb-4 flex items-center justify-center md:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="mr-3 h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    + 01 234 567 88
+                </p>
+                <p class="flex items-center justify-center md:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="mr-3 h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    + 01 234 567 89
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Copyright section-->
+    <div class="bg-orange-100 p-6 text-center">
+        <span>© 2023 Copyright:</span>
+        <a class="font-semibold text-orange-800" href="#">Team Innovators Pro Max</a>
+    </div>
+</footer>
+
+<!-- footer container above -->
+
+<script>
+    // Initialization for ES Users
+    import {
+        Carousel,
+        initTE,
+    } from "tw-elements";
+
+    initTE({ Carousel });
+</script>
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
